@@ -87,11 +87,16 @@ body {
   align-items: center;
 }
 
+/* .nav-point {
+  position: relative;
+} */
+
 .nav-point:not(:last-child) {
   margin-right: 50px;
 }
 
 .nav-item {
+  display: block;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -107,6 +112,19 @@ body {
 .nav-item.current {
   color: var(--accent-color);
 }
+
+.nav-item.current:hover::after,
+.nav-item.current:focus::after {
+  display: block;
+  position: relative;
+  top: 31px;
+  border-radius: 2px;
+  content: '';
+  max-width: 78px;
+  height: 4px;
+  background-color: var(--accent-color);
+}
+
 /* Header: contacts */
 .contacts {
   display: flex;
