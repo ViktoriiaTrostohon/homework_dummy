@@ -1,0 +1,8 @@
+fill="#757575" 
+style="fill: var(--color4, #757575)" (envelope)
+
+fill="#757575" style="fill: var(--color4, #757575)"
+fill="#757575" style="fill: var(--color4, #757575)" (smartphone)
+
+fill="#afb1b8" style="fill: var(--color3, #afb1b8)" (facebook)
+
