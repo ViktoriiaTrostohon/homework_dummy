@@ -298,7 +298,8 @@ body {
 .works-button:focus {
   background-color: violet;
   border-color: var(--accent-color);
-  transition: background-color 1000ms ease-in 200ms, border-color 1000ms ease-in 200ms;
+  transition: background-color 1000ms ease-in 200ms, border-color 1000ms ease-in 200ms,
+    opacity 1000ms ease-in 200ms;
   cursor: pointer;
   opacity: 1;
 }
@@ -312,8 +313,11 @@ body {
   display: flex;
   position: absolute;
   content: '';
-  width: 2px;
-  height: 260px;
+  width: 5px;
+  height: 100%;
+  top: 0;
+  right: -10px;
+  opacity: 0.7;
   background-color: #e2230d;
 }
 
