@@ -287,7 +287,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(210%, 210%);
+  transform: translate(60%, 50%);
   border: 3px solid #f90582;
   border-radius: 4px;
   background-color: yellow;
