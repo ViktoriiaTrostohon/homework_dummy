@@ -287,7 +287,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(350%, 350%);
+  transform: translate(210%, 210%);
   border: 3px solid #f90582;
   border-radius: 4px;
   background-color: yellow;
@@ -301,6 +301,20 @@ body {
   transition: background-color 1000ms ease-in 200ms, border-color 1000ms ease-in 200ms;
   cursor: pointer;
   opacity: 1;
+}
+
+.works-actions {
+  position: relative;
+}
+
+.works-actions:hover::after,
+.works-actions:focus::after {
+  display: flex;
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 260px;
+  background-color: #e2230d;
 }
 
 .works-icon {
