@@ -208,7 +208,10 @@
         </address>
       </div>
     </footer>
-    <div class="backdrop is-hidden">
+
+    <button data-modal-open>Open</button>
+
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <p class="modal-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quaerat sint ipsam nobis
@@ -220,7 +223,7 @@
           neque expedita harum reprehenderit natus accusantium. Quisquam explicabo at rem nihil
           neque cumque soluta iusto.
         </p>
-        <button type="button" class="modal-button">Close</button>
+        <button data-modal-close>Close</button>
       </div>
     </div>
 
@@ -230,6 +233,21 @@
         .querySelector('.header-section')
         .getBoundingClientRect();
       document.body.style.paddingTop = `${headerSectionHeight}px`;
+
+      (() => {
+        const refs = {
+          openModalBtn: document.querySelector('[data-modal-open]'),
+          closeModalBtn: document.querySelector('[data-modal-close]'),
+          modal: document.querySelector('[data-modal]'),
+        };
+
+        refs.openModalBtn.addEventListener('click', toggleModal);
+        refs.closeModalBtn.addEventListener('click', toggleModal);
+
+        function toggleModal() {
+          refs.modal.classList.toggle('is-hidden');
+        }
+      })();
     </script>
   </body>
 </html>
