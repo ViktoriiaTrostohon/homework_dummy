@@ -434,6 +434,31 @@ div.employee-info {
 
 .backdrop {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(226, 35, 13, 0.29);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 200px;
+  min-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.modal-text {
+  margin-bottom: 20px;
 }
 
 /* Examples of our works:buttons */
