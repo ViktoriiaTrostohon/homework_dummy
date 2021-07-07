@@ -32,7 +32,6 @@ body {
   color: var(--main-text-color);
   font-family: Roboto, Open Sans, Cabin, sans-serif;
   letter-spacing: 0.03em;
-  padding-top: 80px;
 }
 .list {
   list-style-type: none;
@@ -429,6 +428,12 @@ div.employee-info {
   font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
+}
+
+/* Modal window and backdrop */
+
+.backdrop {
+  position: fixed;
 }
 
 /* Examples of our works:buttons */

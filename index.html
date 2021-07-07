@@ -208,5 +208,14 @@
         </address>
       </div>
     </footer>
+    <div class="backdrop"></div>
+
+    <script>
+      // console.log(document.querySelector('.header-section').getBoundingClientRect().height);
+      const { height: headerSectionHeight } = document
+        .querySelector('.header-section')
+        .getBoundingClientRect();
+      document.body.style.paddingTop = `${headerSectionHeight}px`;
+    </script>
   </body>
 </html>
