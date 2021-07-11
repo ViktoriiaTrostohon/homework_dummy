@@ -234,26 +234,40 @@
       </div>
     </div>
 
+    <form class="js-speaker-form">
+      <label for="name">Name</label>
+      <input type="text" name="user-name" id="name" />
+      <label for="tel">Telephone Number</label>
+      <input type="tel" name="phone-number" id="tel" />
+    </form>
+
     <script>
       // console.log(document.querySelector('.header-section').getBoundingClientRect().height);
-      const { height: headerSectionHeight } = document
-        .querySelector('.header-section')
-        .getBoundingClientRect();
-      document.body.style.paddingTop = `${headerSectionHeight}px`;
+      // const { height: headerSectionHeight } = document
+      //   .querySelector('.header-section')
+      //   .getBoundingClientRect();
+      // document.body.style.paddingTop = `${headerSectionHeight}px`;
 
+      // (() => {
+      //   const refs = {
+      //     openModalBtn: document.querySelector('[data-modal-open]'),
+      //     closeModalBtn: document.querySelector('[data-modal-close]'),
+      //     modal: document.querySelector('[data-modal]'),
+      //   };
+
+      //   refs.openModalBtn.addEventListener('click', toggleModal);
+      //   refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      //   function toggleModal() {
+      //     refs.modal.classList.toggle('is-hidden');
+      //   }
+      // })();
       (() => {
-        const refs = {
-          openModalBtn: document.querySelector('[data-modal-open]'),
-          closeModalBtn: document.querySelector('[data-modal-close]'),
-          modal: document.querySelector('[data-modal]'),
-        };
+        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+          e.preventDefault();
 
-        refs.openModalBtn.addEventListener('click', toggleModal);
-        refs.closeModalBtn.addEventListener('click', toggleModal);
-
-        function toggleModal() {
-          refs.modal.classList.toggle('is-hidden');
-        }
+          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+        });
       })();
     </script>
   </body>
