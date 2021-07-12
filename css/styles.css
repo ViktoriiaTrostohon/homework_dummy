@@ -650,3 +650,7 @@ div.product-description {
   /* opacity: 1; */
   position: absolute;
 }
+
+textarea {
+  resize: none;
+}
