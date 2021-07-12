@@ -239,6 +239,27 @@
       <input type="text" name="user-name" id="name" />
       <label for="tel">Telephone Number</label>
       <input type="tel" name="phone-number" id="tel" />
+      <div role="group">
+        <input type="checkbox" name="topic" value="html" id="html" />
+        <label for="html">HTML</label>
+        <input type="checkbox" name="topic" value="css" id="css" />
+        <label for="css">CSS</label>
+        <input type="checkbox" name="topic" value="js" id="js" />
+        <label for="js">JavaScript</label>
+      </div>
+
+      <div role="group">
+        <input type="radio" name="experience" value="junior" id="junior" />
+        <label for="junior">Junior</label>
+
+        <input type="radio" name="experience" value="senior" id="senior" checked />
+        <label for="senior">Senior</label>
+
+        <input type="radio" name="experience" value="middle" id="middle" />
+        <label for="middle">Middle</label>
+      </div>
+
+      <button type="submit">Apply</button>
     </form>
 
     <script>
