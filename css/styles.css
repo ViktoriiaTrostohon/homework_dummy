@@ -654,3 +654,57 @@ div.product-description {
 textarea {
   resize: none;
 }
+.form {
+  width: 600px;
+  outline: 1px solid tomato;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.form-field {
+  /* outline: 1px solid blueviolet; */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field input {
+  margin: 0;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.form-field label {
+  margin-bottom: 20px;
+}
+
+.form-field input::placeholder {
+  color: brown;
+}
+.group-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.speech-options,
+.expertise-options {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.speech-options input[type='checkbox'] {
+  width: 40px;
+  /* height: 40px; */
+}
+
+.speech-options li {
+  display: flex;
+  align-items: center;
+}
+
+.speech-options label {
+  font-size: 20px;
+  margin-left: 10px;
+}
