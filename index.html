@@ -234,21 +234,25 @@
       </div>
     </div>
 
-    <form class="form js-speaker-form" autocomplete="on">
+    <form class="form js-speaker-form" autocomplete="off">
       <div class="form-field">
-        <label for="name" class="form-label">Name</label>
         <input
           class="form-input"
           type="text"
           name="user-name"
           id="name"
-          placeholder="John Smith"
+          placeholder=" "
           autofocus
         />
+        <label for="name" class="form-label">Name</label>
+        <svg class="form-icon" height="18" width="18">
+          <use href="./images/sprite.svg#icon-person-black"></use>
+        </svg>
       </div>
+
       <div class="form-field">
-        <label for="tel">Telephone Number</label>
-        <input type="tel" name="phone-number" id="tel" />
+        <input class="form-input" type="tel" name="phone-number" id="tel" placeholder=" " />
+        <label for="tel" class="form-label">Telephone Number</label>
       </div>
 
       <div role="group" class="group">

@@ -656,32 +656,63 @@ textarea {
 }
 .form {
   width: 600px;
-  outline: 1px solid tomato;
+  margin: 0 auto;
+
+  /* outline: 1px solid tomato;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding: 20px; */
 }
 
 .form-field {
+  position: relative;
   /* outline: 1px solid blueviolet; */
-  margin-bottom: 20px;
+  /* margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
-.form-field input {
+.form-label {
+  position: absolute;
+  top: 30%;
+  left: 42px;
+  transform: translateY(-50%);
+  transition: 250ms linear;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translateY(-40px) translateX(-20px);
+}
+
+.form-input {
+  margin-bottom: 30px;
+  padding: 10px 35px;
+}
+
+.form-icon {
+  position: absolute;
+  top: 12px;
+  left: 11px;
+}
+
+.form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
+}
+
+/* .form-field input {
   margin: 0;
   padding: 6px 10px;
   border-radius: 3px;
-}
+} */
 
-.form-field label {
+/* .form-field label {
   margin-bottom: 20px;
-}
+} */
 
-.form-field input::placeholder {
+/* .form-field input::placeholder {
   color: brown;
-}
+} */
 .group-title {
   margin-top: 0;
   margin-bottom: 20px;
