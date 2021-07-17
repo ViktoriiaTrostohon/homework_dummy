@@ -253,22 +253,32 @@
       <div class="form-field">
         <input class="form-input" type="tel" name="phone-number" id="tel" placeholder=" " />
         <label for="tel" class="form-label">Telephone Number</label>
+        <svg class="form-icon" height="18" width="18">
+          <use href="./images/sprite.svg#icon-person-black"></use>
+        </svg>
       </div>
 
       <div role="group" class="group">
         <h2 class="group-title">Speech topic</h2>
         <ul class="speech-options">
           <li>
-            <input type="checkbox" name="topic" value="html" id="html" />
-            <label for="html">HTML</label>
+            <label class="checkbox-label"
+              ><input class="checkbox" type="checkbox" name="topic" value="html" />
+              <span class="checkbox-icon"></span>HTML
+            </label>
           </li>
           <li>
-            <input type="checkbox" name="topic" value="css" id="css" /> <label for="css">CSS</label>
+            <label class="checkbox-label"
+              ><input class="checkbox" type="checkbox" name="topic" value="css" /><span
+                class="checkbox-icon"
+              ></span
+              >CSS</label
+            >
           </li>
-          <li>
+          <!-- <li>
             <input type="checkbox" name="topic" value="js" id="js" />
             <label for="js">JavaScript</label>
-          </li>
+          </li> -->
         </ul>
       </div>
 

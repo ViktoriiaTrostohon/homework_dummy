@@ -688,6 +688,8 @@ textarea {
 .form-input {
   margin-bottom: 30px;
   padding: 10px 35px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 
 .form-icon {
@@ -696,9 +698,60 @@ textarea {
   left: 11px;
 }
 
-.form-input:focus ~ .form-icon {
+.form-field:focus-within > .form-icon {
   fill: var(--accent-color);
 }
+
+.form-input:focus-within {
+  border: 1px solid var(--accent-color);
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-label {
+  display: block;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 3px 3px 3px;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: 2px solid var(--title-text-color);
+  transition: border 250ms linear;
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  background-image: url('../images/icon-check.svg');
+  border-color: var(--accent-color);
+  transition: background-color 250ms linear, background-image 250ms linear,
+    background-color 250ms linear;
+  /* background-size: contain;
+  background-origin: border-box; */
+}
+
+/* .form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
+} */
 
 /* .form-field input {
   margin: 0;
